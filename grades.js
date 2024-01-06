@@ -107,7 +107,7 @@ function getLearnerData(courseInfo, assignmentGroups, learnerSubmissions) {
 
     for (const assignmentGroup of assignmentGroups) {
         const assignmentLookup = new Map(assignmentGroup.assignments.map(a => [a.id, a]));
-
+    }
         for (const submission of learnerSubmissions) {
             const assignment = assignmentLookup.get(submission.assignment_id);
             if (assignment) {
@@ -118,7 +118,7 @@ function getLearnerData(courseInfo, assignmentGroups, learnerSubmissions) {
 
         totalWeight += assignmentGroup.group_weight;
     }
-}
+
     // Initialize variables for results
     const formattedResults = [];
 
